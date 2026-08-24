@@ -11,6 +11,10 @@
           content="The career history of Jeff Boguski, including live production, touring and production management experience since 1989.">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -27,18 +31,20 @@
 
         .inner {
             max-width: 900px;
-            margin: auto;
+            margin: 0 auto;
         }
 
-        h1 {
+        header h1 {
             margin: 0;
             font-size: 38px;
             font-weight: 500;
+            letter-spacing: -0.5px;
         }
 
         header p {
+            margin: 8px 0 0;
             color: #ccc;
-            margin-top: 8px;
+            font-size: 17px;
         }
 
         nav {
@@ -55,33 +61,52 @@
         nav a {
             color: #333;
             text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         main {
             max-width: 900px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 50px 20px 70px;
         }
 
         section {
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         h2 {
             font-size: 25px;
             font-weight: 500;
-            margin-bottom: 15px;
+            margin: 0 0 18px;
         }
 
         h3 {
             font-size: 19px;
             font-weight: 500;
-            margin-bottom: 8px;
+            margin: 38px 0 10px;
+        }
+
+        h3:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            max-width: 760px;
+            margin: 0 0 18px;
         }
 
         .timeline {
             border-left: 3px solid #999;
             padding-left: 25px;
+        }
+
+        .role {
+            font-weight: 600;
+            margin-bottom: 6px;
         }
 
         footer {
@@ -90,6 +115,26 @@
             padding: 25px 20px;
             color: #777;
             font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 40px 20px 35px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            nav .inner {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            main {
+                padding-top: 40px;
+            }
         }
     </style>
 </head>
@@ -114,85 +159,89 @@
 
 <main>
 
-<section>
-<h2>Career Overview</h2>
+    <section>
+        <h2>Career Overview</h2>
 
-<p>
-My career in live entertainment began in Winnipeg in 1989. Starting from the
-technical side of production, I developed experience across touring, live events
-and production management, eventually taking on leadership roles with touring
-productions throughout North America and internationally.
-</p>
-
-</section>
-
-
-<section class="timeline">
-
-<h3>1989–2000 — Technical Foundations & Touring</h3>
-
-<p>
-I began working in live production while studying electrical engineering at the
-University of Manitoba, supporting campus productions through the UMSU technical
-team.
-</p>
-
-<p>
-After university, I continued working in live entertainment as a freelance
-technician and production professional, becoming a member of IATSE Local 63 in
-1995.
-</p>
-
-<p>
-During this period I worked in touring and production roles including work with
-The Watchmen, Lilith Fair and Iron Maiden.
-</p>
+        <p>
+            My career in live entertainment began in Winnipeg in 1989, working on
+            the technical side of live production while studying electrical
+            engineering at the University of Manitoba. Over time, my work expanded
+            into touring, production management and production leadership roles
+            with productions across North America and internationally.
+        </p>
+    </section>
 
 
-<h3>2001–2015 — Stage Group International</h3>
+    <section class="timeline">
 
-<p>
-As a Principal Partner and Senior Production Manager with Stage Group
-International, I worked with touring productions across North America and
-internationally.
-</p>
+        <h3>1989–2000 — Technical Foundations &amp; Touring</h3>
 
-<p>
-My responsibilities included production management, budgeting, staffing,
-logistics, contracts, immigration, ticketing and show settlement.
-</p>
+        <p>
+            I began working in live production while studying electrical
+            engineering at the University of Manitoba, supporting campus
+            productions through the UMSU technical team.
+        </p>
 
+        <p>
+            After university, I continued working in live entertainment as a
+            freelance technician and production professional, joining IATSE
+            Local 63 in 1995.
+        </p>
 
-<h3>2000s–Present — Night Castle Management</h3>
-
-<p>
-Through Night Castle Management, I oversee production for Trans-Siberian
-Orchestra, Savatage and American Young Voices.
-</p>
-
-<p>
-The work involves managing the production requirements of large-scale touring
-projects and coordinating the many moving parts required to deliver them on the
-road.
-</p>
+        <p>
+            During this period, I worked in touring and production roles with
+            projects including The Watchmen, Lilith Fair and Iron Maiden.
+        </p>
 
 
-<h3>Production Strategy</h3>
+        <h3>2001–2015 — Stage Group International</h3>
 
-<p>
-Through Production Strategy, I continue independent production management and
-consulting work within the live entertainment industry.
-</p>
+        <p>
+            As a Principal Partner and Senior Production Manager with Stage
+            Group International, I managed touring productions across North
+            America and internationally.
+        </p>
 
-</section>
+        <p>
+            Responsibilities included production management, budgeting,
+            staffing, logistics, contracts, immigration, ticketing and
+            show settlement.
+        </p>
+
+
+        <h3>2000s–Present — Night Castle Management</h3>
+
+        <p>
+            <strong>Night Castle Management</strong>
+        </p>
+
+        <p>
+            Responsible for production oversight of Trans-Siberian Orchestra,
+            Savatage and American Young Voices, including production planning,
+            budgeting, technical requirements, staffing, vendor coordination
+            and touring operations.
+        </p>
+
+
+        <h3>Production Strategy</h3>
+
+        <p>
+            <strong>Production Strategy</strong>
+        </p>
+
+        <p>
+            Independent production management and consulting.
+        </p>
+
+    </section>
 
 </main>
 
 
 <footer>
-<div class="inner">
-© 2026 Jeff Boguski
-</div>
+    <div class="inner">
+        © 2026 Jeff Boguski
+    </div>
 </footer>
 
 </body>
