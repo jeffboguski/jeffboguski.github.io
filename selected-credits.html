@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +30,9 @@
             padding: 45px 20px;
         }
 
-        .inner {
+        header .inner,
+        main,
+        footer .inner {
             max-width: 900px;
             margin: 0 auto;
         }
@@ -53,9 +56,9 @@
         }
 
         nav .inner {
-            padding: 15px 20px;
             display: flex;
             gap: 25px;
+            padding: 15px 20px;
             flex-wrap: wrap;
         }
 
@@ -70,13 +73,24 @@
         }
 
         main {
-            max-width: 900px;
-            margin: auto;
             padding: 50px 20px 70px;
         }
 
         .intro {
             margin-bottom: 45px;
+        }
+
+        .category {
+            margin: 55px 0 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .category:first-of-type {
+            margin-top: 0;
         }
 
         .credit {
@@ -86,30 +100,20 @@
         }
 
         .credit h2 {
+            margin: 0 0 5px;
             font-size: 24px;
             font-weight: 500;
-            margin: 0 0 5px;
         }
 
         .role {
+            margin-bottom: 18px;
             font-size: 15px;
             color: #666;
-            margin-bottom: 18px;
         }
 
         .credit p {
             max-width: 760px;
             margin: 0 0 16px;
-        }
-
-        .category {
-            margin-top: 55px;
-            margin-bottom: 30px;
-            font-size: 18px;
-            font-weight: 500;
-            color: #444;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
         }
 
         footer {
@@ -130,21 +134,23 @@
                 font-size: 34px;
             }
 
+            nav .inner {
+                gap: 18px;
+            }
+
             main {
                 padding-top: 40px;
             }
         }
-
     </style>
 </head>
-
 
 <body>
 
 <header>
     <div class="inner">
         <h1>Selected Credits</h1>
-       <p>Live Entertainment · Touring · Production</p>
+        <p>Touring · Live Entertainment · Production</p>
     </div>
 </header>
 
@@ -170,9 +176,12 @@
     </div>
 
 
-       <!-- Current / Recent Work -->
+    <div class="category">
+        Current Work
+    </div>
 
-    <div class="work">
+
+    <div class="credit">
 
         <h2>Trans-Siberian Orchestra</h2>
 
@@ -181,153 +190,14 @@
         </div>
 
         <p>
-            Responsible for production management of the West touring production
-            of Trans-Siberian Orchestra through Night Castle Management.
+            Production management and production oversight for the West touring
+            production of Trans-Siberian Orchestra.
         </p>
-
-        <div class="references">
-            <strong>Documentation</strong>
-
-            <p>
-                <a href="https://plsn.com/articles/showtime/trans-siberian-orchestra-winter-tour-2025/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — Trans-Siberian Orchestra Winter Tour 2025
-                </a>
-            </p>
-
-            <p>
-                <a href="https://plsn.com/articles/cover-story-current-issue/trans-siberian-orchestra/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — Trans-Siberian Orchestra
-                </a>
-            </p>
-
-            <p>
-                <a href="https://news.pollstar.com/2020/04/06/qs-with-adam-lind-co-manager-of-q1-chart-toppers-trans-siberian-orchestra/"
-                   target="_blank" rel="noopener noreferrer">
-                    Pollstar — Q's With Adam Lind, Co-Manager Of Q1 Chart Toppers Trans-Siberian Orchestra
-                </a>
-            </p>
-
-            <p>
-                <a href="https://plsn.com/archives/february-2023/trans-siberian-orchestra-an-effects-filled-production/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — Trans-Siberian Orchestra: An Effects Filled Production
-                </a>
-            </p>
-
-            <p>
-                <a href="https://plsn.com/articles/features/tsos-night-castle-anything-but-silent/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — TSO's Night Castle: Anything but Silent
-                </a>
-            </p>
-        </div>
 
     </div>
 
 
-    <div class="work">
-
-        <h2>Ben Platt: Live at the Palace</h2>
-
-        <div class="role">
-            Tour Production Supervisor
-        </div>
-
-        <p>
-            Tour Production Supervisor for Ben Platt's concert residency at the
-            Palace Theatre.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong>
-
-            <p>
-                <a href="https://playbill.com/production/ben-platt-live-at-the-palace-broadway-palace-theatre-2024"
-                   target="_blank" rel="noopener noreferrer">
-                    Playbill — Ben Platt: Live at the Palace
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="work">
-
-        <h2>New Kids on the Block — The MixTape Tour 2022</h2>
-
-        <div class="role">
-            Production Manager
-        </div>
-
-        <p>
-            Production Manager for New Kids on the Block's The MixTape Tour 2022.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong>
-
-            <p>
-                <a href="https://plsn.com/articles/production-spotlight/nkotb-the-mixtape-tour-2022/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — NKOTB: The MixTape Tour 2022
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="work">
-
-        <h2>boygenius</h2>
-
-        <div class="role">
-            Stage Manager
-        </div>
-
-        <p>
-            Stage management for the boygenius touring production.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong>
-
-            <p>
-                <a href="https://plsn.com/archives/december-2023/boygenius/"
-                   target="_blank" rel="noopener noreferrer">
-                    PLSN — boygenius
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="work">
-
-        <h2>American Young Voices</h2>
-
-        <div class="role">
-            Production Management
-        </div>
-
-        <p>
-            Production oversight for American Young Voices through Night Castle
-            Management.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
-
-    </div>
-
-
-    <div class="work">
+    <div class="credit">
 
         <h2>Savatage</h2>
 
@@ -336,47 +206,99 @@
         </div>
 
         <p>
-            Production oversight for Savatage through Night Castle Management.
+            Production management through Night Castle Management.
         </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
 
     </div>
 
 
-    <!-- SGI Era -->
+    <div class="credit">
 
-    <div class="work">
-
-        <h2>Stage Group International</h2>
+        <h2>American Young Voices</h2>
 
         <div class="role">
-            Principal Partner / Senior Production Manager
+            Production Management
         </div>
 
         <p>
-            Stage Group International provided production management and tour
-            management services for touring productions across North America
-            and internationally.
+            Production management through Night Castle Management.
         </p>
-
-        <p>
-            Responsibilities included production management, budgeting, staffing,
-            logistics, contracts, immigration, ticketing and show settlement.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
 
     </div>
 
 
-    <div class="work">
+    <div class="category">
+        PSI Period
+    </div>
+
+
+    <div class="credit">
+
+        <h2>Drake — Aubrey &amp; the Three Migos Tour</h2>
+
+        <div class="role">
+            Co-Stage Manager — European Tour
+        </div>
+
+        <p>
+            Touring production work during the European leg of the tour.
+        </p>
+
+    </div>
+
+
+    <div class="credit">
+
+        <h2>Lady Gaga — Joanne World Tour</h2>
+
+        <div class="role">
+            Production / Stage Management
+        </div>
+
+        <p>
+            Touring production work during the Joanne World Tour.
+        </p>
+
+    </div>
+
+
+    <div class="credit">
+
+        <h2>Josh Groban</h2>
+
+        <div class="role">
+            Television Special Production
+        </div>
+
+        <p>
+            Production work for a Josh Groban television special.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+        SGI Period
+    </div>
+
+
+    <div class="credit">
+
+        <h2>Trans-Siberian Orchestra</h2>
+
+        <div class="role">
+            Production Management
+        </div>
+
+        <p>
+            Began working with Trans-Siberian Orchestra in 2002 while at
+            Stage Group International.
+        </p>
+
+    </div>
+
+
+    <div class="credit">
 
         <h2>KISS</h2>
 
@@ -385,124 +307,77 @@
         </div>
 
         <p>
-            Production management work associated with KISS touring productions.
+            Production management work spanning the SGI and PSI periods.
         </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
 
     </div>
 
 
-    <!-- Earlier Touring Work -->
-
-    <div class="work">
-
-        <h2>Spirit of the Dance</h2>
-
-        <div class="role">
-            Production Manager
-        </div>
-
-        <p>
-            Production management for the touring production of Spirit of the Dance.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong>
-
-            <p>
-                <a href="https://www.gatewayproductionarchives.com/Archive/Playbill/2000/2000_Spring_Two.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Gateway Production Archives — Spirit of the Dance: The New Millennium
-                </a>
-            </p>
-        </div>
-
+    <div class="category">
+        Early Touring &amp; Technical Work
     </div>
 
 
-    <div class="work">
-
-        <h2>Universoul Circus</h2>
-
-        <div class="role">
-            Production Management
-        </div>
-
-        <p>
-            Production work with Universoul Circus during the late 1990s.
-        </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
-
-    </div>
-
-
-    <div class="work">
+    <div class="credit">
 
         <h2>Iron Maiden</h2>
 
         <div class="role">
-            Touring / Live Production
+            Lighting / Technical Production
         </div>
 
         <p>
-            Motion Labs Operator for Westsun Lighting
+            Motion Labs Operator for Westsun Lighting.
         </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
 
     </div>
 
 
-    <div class="work">
+    <div class="credit">
 
         <h2>Lilith Fair</h2>
 
         <div class="role">
-            Touring / Live Production
+            Lighting / Technical Production
         </div>
 
         <p>
-            Tour site electrician for Westsun Lighting
+            Tour site electrician for Westsun Lighting.
         </p>
-
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
 
     </div>
 
 
-    <div class="work">
+    <div class="credit">
+
+        <h2>Soul Circus</h2>
+
+        <div class="role">
+            Lighting / Technical Production
+        </div>
+
+        <p>
+            Touring production work with Westsun Winnipeg Lighting Company.
+        </p>
+
+    </div>
+
+
+    <div class="credit">
 
         <h2>The Watchmen</h2>
 
         <div class="role">
-            Touring / Live Production
+            Touring / Production
         </div>
 
         <p>
-            Touring work with The Watchmen during the early part of my career in
-            live entertainment.
+            Touring work with The Watchmen during the early part of my career
+            in live entertainment.
         </p>
 
-        <div class="references">
-            <strong>Documentation</strong><br>
-            Documentation in development.
-        </div>
-
     </div>
+
 
 </main>
 
@@ -513,6 +388,8 @@
     </div>
 </footer>
 
+
 </body>
 
 </html>
+```
