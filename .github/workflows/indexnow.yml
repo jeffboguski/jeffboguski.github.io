@@ -1,0 +1,47 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          INDEXNOW_KEY: 83eb0cf5838ad96b137bada729f9c369
+        run: |
+          for attempt in {1..30}; do
+            PUBLISHED_KEY=$(curl --silent --fail "https://jeffboguski.com/$INDEXNOW_KEY.txt" || true)
+            if [ "$PUBLISHED_KEY" = "$INDEXNOW_KEY" ]; then
+              break
+            fi
+            sleep 10
+          done
+
+          if [ "$PUBLISHED_KEY" != "$INDEXNOW_KEY" ]; then
+            echo "IndexNow key file was not available after five minutes."
+            exit 1
+          fi
+
+          URLS=$(sed -n 's:.*<loc>\(.*\)</loc>.*:\1:p' sitemap.xml | jq -R . | jq -s .)
+          jq -n \
+            --arg host "jeffboguski.com" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://jeffboguski.com/$INDEXNOW_KEY.txt" \
+            --argjson urlList "$URLS" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}' \
+            > indexnow-request.json
+          curl --fail-with-body \
+            --request POST \
+            --header "Content-Type: application/json; charset=utf-8" \
+            --data @indexnow-request.json \
+            https://api.indexnow.org/indexnow
